@@ -1,11 +1,12 @@
 # dwm-nullptr
-My custom dwm build
 
-Dependencies:
-Fontawesome
-urxvt
+My custom build of dwm-6.2, complete with my keybinds and rice
 
-Patches:
-attachaside
-awesomebar
-fullgaps
+**Dependencies:** <br>
+Fontawesome <br>
+urxvt <br>
+<br>
+**Patches: <br>**
+attachaside <br>
+awesomebar <br>
+fullgaps <br>
