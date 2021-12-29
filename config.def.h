@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
@@ -99,6 +101,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{0, 	XF86XK_AudioRaiseVolume, 	spawn, 	SHCMD("pamixer -i 3; pkill -RTMIN+2 dwmblocks")},
+	{0, 	XF86XK_AudioLowerVolume,	spawn,	SHCMD("pamixer -d 3; pkill -RTMIN+2 dwmblocks")},
 };
 
 /* button definitions */
@@ -120,4 +124,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
